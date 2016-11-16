@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="14.0" DefaultTargets="Build">
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'Common.props'))\Common.props" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -15,24 +14,12 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>$(SdkStage0Version)</Version>
-    </PackageReference>
-    <PackageReference Include="NuGet.ProjectModel">
-      <Version>$(NuGetVersion)</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.DependencyModel">
-      <Version>$(CoreSetupVersion)</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Build.Framework">
-      <Version>$(MsBuildPackagesVersion)</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Build.Utilities.Core">
-      <Version>$(MsBuildPackagesVersion)</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp">
-      <Version>$(RoslynVersion)</Version>
-    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Sdk" Version="$(SdkStage0Version)" />
+    <PackageReference Include="NuGet.ProjectModel" Version="$(NuGetVersion)" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="$(CoreSetupVersion)" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="$(MsBuildPackagesVersion)" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="$(MsBuildPackagesVersion)" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="$(RoslynVersion)" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LockFileLookup.cs" />
